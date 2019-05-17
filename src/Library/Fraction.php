@@ -10,6 +10,7 @@ namespace PhpHelpers\Library;
  * https://stackoverflow.com/questions/812815/php-intval-and-floor-return-value-that-is-too-low
  * Continued_fraction
  * https://en.wikipedia.org/wiki/Continued_fraction
+ * http://jonisalonen.com/2012/converting-decimal-numbers-to-ratios/
  */
 class Fraction
 {
