@@ -34,7 +34,9 @@ class Fraction
             return (string) floor($number); // integer value
         }
         $isNegative = $number < 0 ? -1 : 1 ;
-        $number = round(abs($number), $precision);
+        // Default round mode is PHP_ROUND_HALF_UP 0.4285714286,  If $precision $number = 0.428571 < 0.4285714
+        // Increase $precision when rounding
+        $number = round(abs($number), $precision + 1);
         $tolerance = pow(0.1, $precision);
         $h1 = 1;
         $h2 = 0;

@@ -28,7 +28,7 @@ class FractionTest extends TestCase
         $result = [];
         $testValues = [null, 0, 1,  0.5, 1.5, 0.6666666667, 0.4285714286];
         foreach ($testValues as $value) {
-            $result[] = Fraction::decimal2Fraction($value, 4);
+            $result[] = Fraction::decimal2Fraction($value, 8);
         }
         $this->assertEquals($result, $expected);
     }
