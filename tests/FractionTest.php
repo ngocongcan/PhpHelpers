@@ -8,7 +8,7 @@ use PhpHelpers\Library\Fraction;
  * Class FractionTest
  * @package PhpHelpers\Tests
  */
-class FractionTest extends TestCase
+final class FractionTest extends TestCase
 {
     public function testFraction2Decimal()
     {

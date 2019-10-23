@@ -2,27 +2,38 @@
 
 namespace PhpHelpers\Tests;
 
-use PHPUnit_Framework_TestCase as PHPUnit;
+use PHPUnit\Framework\TestCase as BaseTestCase;
 
 /**
  * Class TestCase
  * @package PhpHelpers\Tests
  */
-class TestCase extends PHPUnit
+abstract class TestCase extends BaseTestCase
 {
+    /**
+     * Indicates if we have made it through the base setUp function.
+     *
+     * @var bool
+     */
+    protected $setUpHasRun = false;
 
-    public function __construct()
+    /**
+     * Setup the test environment.
+     *
+     * @return void
+     */
+    protected function setUp(): void
     {
-        parent::__construct();
+        $this->setUpHasRun = true;
     }
 
-    public function setUp()
+    /**
+     * Clean up the testing environment before the next test.
+     *
+     * @return void
+     */
+    protected function tearDown(): void
     {
-        parent::setUp();
-    }
-
-    public function tearDown()
-    {
-        parent::tearDown();
+        $this->setUpHasRun = false;
     }
 }
