@@ -10,6 +10,8 @@
 __PhpHelpers includes:__
 
 - **Fraction** (Converting fraction string to decimal and vice versa)
+- **Money & Currency** (Format currency)
+- **XMLHelper** 
 - Ready **Unit Test**
 - Version Control: **Git** (`.gitattributes`, `.gitignore`)
 - Continuous Integration: **Travis** and **Scrutinizer** (`.scrutinizer.yml`, `.travis.yml`)
